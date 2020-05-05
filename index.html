@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="meat" id="meat">
+        <div class="word emily" data-set="EMILY">
+            EMILY
+        </div>
+        <div class="word ELLIE" data-set="ELLIE">
+            ELLIE
+        </div>
+        <div class="word ABIGAIL" data-set="ABIGAIL">
+            ABIGAIL
+        </div>
+        <div class="word ANNABELLE" data-set="ANNABELLE">
+            ANNABELLE
+        </div>
+        <div class="word KATIE" data-set="KATIE">
+            KATIE
+        </div>
+        <div class="word ARIA" data-set="ARIA">
+            ARIA
+        </div>
+        <div class="word ANNIE" data-set="ANNIE">
+            ANNIE
+        </div>
+       <div class="word LISA" data-set="LISA">
+            LISA
+        </div>
+        <div class="word AMANDA" data-set="AMANDA">
+            AMANDA
+        </div>
+        <div class="word  LEAH" data-set="LEAH">
+            LEAH
+        </div>
+        <div class="word  MEGAN" data-set="MEGAN">
+            MEGAN
+        </div>
+        <div class="word  LEXI" data-set="LEXI">
+            LEXI
+        </div>
+        <div class="word GRACE" data-set="GRACE">
+            GRACE
+        </div>
+        <div class="word VIOLET" data-set="VIOLET">
+            VIOLET
+        </div>
+        <div class="word EVA" data-set=" EVA">
+            EVA
+        </div>
+        <div class="word CLARA" data-set="CLARA">
+            CLARA
+        </div>
+        <div class="word SERENA" data-set="SERENA">
+            SERENA
+        </div>
+        <div class="word EVELYN" data-set="EVELYN">
+            EVELYN
+        </div>
+        <div class="word  ALICE" data-set="ALICE">
+            ALICE
+        </div>
+        <div class="word  AURORA" data-set="AURORA">
+            AURORA
+        </div>
+        <div class="word  IVY" data-set="IVY">
+            IVY
+        </div>
+        <div class="word  SOPHIA" data-set="SOPHIA">
+            SOPHIA
+        </div>
+        <div class="word  INFO" >
+            CLICK ON ANY NAME THAT YOU ARE INTERESTED
+        </div>
+        <div class="word THEA" data-set="THEA">
+            THEA
+        </div>
+        <div class="word LUCY" data-set="LUCY">
+            LUCY
+        </div>
+        <div class="word JOY" data-set="JOY">
+            JOY
+        </div>
+        <div class="word CHLOE" data-set="CHLOE">
+            CHLOE
+        </div>
+        <div class="word OLIVA" data-set="OLIVA">
+            OLIVA
+        </div>
+        <div class="word MOLLY" data-set="MOLLY">
+            MOLLY
+        </div>
+        <div class="word SUMMER" data-set="SUMMER">
+            SUMMER
+        </div>
+        <div class="word BELLA" data-set="BELLA">
+            BELLA
+        </div>
+        <div class="word HANNA" data-set="HANNA">
+            HANNA
+        </div>
+        <div class="word NANCY" data-set="NANCY">
+            NANCY
+        </div>
+        <div class="word ELIZABETH" data-set="ELIZABETH">
+            ELIZABETH
+        </div>
+        <div class="word JULIA" data-set="JULIA">
+            JULIA
+        </div>
+        <div class="word BELLA" data-set="BELLA">
+            BELLA
+        </div>
+        <div class="word ROSE" data-set="ROSE">
+            ROSE
+        </div>
+        <div class="word WILLOW" data-set="WILLOW">
+            WILLOW
+        </div>
+        <div class="mark" id="mark" style="display: none;">
+            <img src="./img/ELLIE.png" alt="" id="imgset">
+        </div>
+        <script>
+            var meat = document.getElementById("meat");
+            var meatChild = document.getElementsByTagName("div");
+            var mark = document.getElementById("mark")
+            var imgset= document.getElementById("imgset");
+            for(var i =0;i<meatChild.length;i++){
+                meatChild[i].onclick=function(e){
+                    console.log(e.target.dataset.set)
+                    imgset.src="./img/"+e.target.dataset.set+".png"
+                        mark.style.display="block"
+                }
+            }
+     
+              mark.addEventListener("click",function(){
+                  console.log(1)
+                  event.stopImmediatePropagation();
+            mark.style.display="none"
+        },true);
+        </script>
+</body>
+</html>
